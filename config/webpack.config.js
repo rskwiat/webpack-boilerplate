@@ -1,19 +1,22 @@
 const webpack = require('webpack');
-const entry = './src/app.js';
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+const entry = ['./src/app.js'];
 const path = __dirname;
-const publicPath = '/';
+const publicPath = './public';
 const filename = '../public/js/bundle.js';
 
 module.exports = {
-  entry: [
-    entry
-  ],
+  entry,
   output: {
     path,
     publicPath,
     filename
   },
   plugins: [
+    new HtmlWebpackPlugin({
+      inject: true
+    }),
     new webpack.HotModuleReplacementPlugin()
   ],
   module: {
