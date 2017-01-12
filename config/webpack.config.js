@@ -14,9 +14,6 @@ module.exports = {
     filename
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      inject: true
-    }),
     new webpack.HotModuleReplacementPlugin()
   ],
   module: {
