@@ -1,5 +1,4 @@
 const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const entry = ['./src/app.js'];
 const path = __dirname;
@@ -13,9 +12,6 @@ module.exports = {
     publicPath,
     filename
   },
-  plugins: [
-    new webpack.HotModuleReplacementPlugin()
-  ],
   module: {
     loaders: [
       {
